@@ -908,7 +908,7 @@ export default class SchedulerData {
             } else if (windowStart <= eventStart && eventEnd >= windowEnd) {
                 span = Math.ceil(timeBetween(eventStart, windowEnd, timeIn) / dividedBy);
             } else {
-                span = Math.ceil(timeBetween(eventStart, eventEnd, timeIn) / dividedBy);
+                span = Math.round(timeBetween(eventStart, eventEnd, timeIn) / dividedBy);
             }
         }
 
